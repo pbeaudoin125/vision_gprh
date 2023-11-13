@@ -27,5 +27,5 @@ streamlit.write(chart_data_agg)
 # col = streamlit.multiselect("Select any column", chart_data_agg.columns)
 # streamlit.dataframe(data[col])
 
-streamlit.bar_chart(df, x="Paie", y="Valeur")
+# streamlit.bar_chart(df, x="Paie", y="Valeur")
 streamlit.bar_chart(chart_data_agg)
