@@ -13,7 +13,7 @@ my_cur.execute("select pay_desc, pay_end_date, bank_value from fact_bank;")
 results = my_cur.fetchall()
 
 # put the dafta into a dataframe
-df = pandas.DataFrame(results, columns=["Paie", "Date de fin" "Valeur"])
+df = pandas.DataFrame(results, columns=["Paie", "Date de fin", "Valeur"])
 
 # temp write the dataframe to the page so we can see what we're working with
 # streamlit.write(df)
