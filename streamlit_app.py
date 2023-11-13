@@ -22,6 +22,6 @@ streamlit.header('Sommaire par paie')
 streamlit.write(df)
 
 chart_data_agg = df.groupby("Paie").sum()
-streamlit.write(chart_data)
+streamlit.write(chart_data_agg)
 
 streamlit.bar_chart(df, x="Paie", y="Valeur")
