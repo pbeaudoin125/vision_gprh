@@ -30,4 +30,4 @@ df = pandas.DataFrame(results, columns=["Directorat", "Type de banque", "Valeur"
 chart_data = df.groupby(["Directorat", "Type de banque"])["Valeur"].sum()
 
 streamlit.header('Sommaire par directorat')
-streamlit.bar_chart(chart_data, x="Directorat", y="Valeur", color="Type de banque")
+streamlit.bar_chart(chart_data, color="Type de banque")
