@@ -19,7 +19,7 @@ df = pandas.DataFrame(results, columns=["Paie", "Valeur"])
 streamlit.header('Sommaire par paie')
 
 # temp write the dataframe to the page so we can see what we're working with
-streamlit.write(df)
+# streamlit.write(df)
 
 chart_data_agg = df.groupby("Paie").sum()
 streamlit.write(chart_data_agg)
