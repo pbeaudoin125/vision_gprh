@@ -27,7 +27,7 @@ streamlit.write(table_data)
 my_cur.execute("select directorat_desc, bank_value from fact_bank;")
 results = my_cur.fetchall()
 df = pandas.DataFrame(results, columns=["Directorat", "Valeur"])
-chart_data = df.groupby("Paie")["Valeur"].sum()
+chart_data = df.groupby("Directorat")["Valeur"].sum()
 
 streamlit.header('Sommaire par directorat')
 streamlit.bar_chart(chart_data)
