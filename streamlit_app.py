@@ -24,7 +24,7 @@ table_data.columns = ["Total", "Nombre"]
 streamlit.header('Sommaire par paie')
 streamlit.write(table_data)
 
-my_cur.execute("select directorat_desc, bank_type_desc_fr, bank_value from fact_bank;")
+my_cur.execute("select directorat_desc, bank_value from fact_bank;")
 results = my_cur.fetchall()
 df = pandas.DataFrame(results, columns=["Directorat", "Valeur"])
 chart_data = df.groupby("Directorat")["Valeur"].sum()
