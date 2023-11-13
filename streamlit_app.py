@@ -10,7 +10,7 @@ my_cur = my_cnx.cursor()
 
 # run a snowflake query and put it all in a var called results
 # my_cur.execute("select pay_desc, count(distinct directorat_desc) as nb_directorats, sum(bank_value) as valeur_banque from fact_bank group by pay_desc order by pay_desc;")
-my_cur.execute("select pay_desc, sum(bank_value) as valeur_banque from fact_bank group by pay_desc;")
+my_cur.execute("select pay_desc, bank_value from fact_bank;")
 results = my_cur.fetchall()
 
 # put the dafta into a dataframe
