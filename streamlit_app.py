@@ -19,6 +19,7 @@ df = pandas.DataFrame(results, columns=["Paie", "Date de fin", "Valeur"])
 # streamlit.write(df)
 
 table_data = df.groupby(["Paie", "Date de fin"])["Valeur"].agg(['sum','count'])
+table_data.columns = ["Paie", "Date de fin", "Valeur", "Total", "Nombre"]
 
 streamlit.header('Sommaire par paie')
 streamlit.write(table_data)
