@@ -14,3 +14,6 @@ results = my_cur.fetchall()
 
 # put the dafta into a dataframe
 df = pandas.DataFrame(results)
+
+# temp write the dataframe to the page so we can see what we're working with
+streamlit.write(df)
