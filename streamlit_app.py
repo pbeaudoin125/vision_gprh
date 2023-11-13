@@ -22,4 +22,4 @@ streamlit.header('Sommaire par paie')
 streamlit.write(df)
 
 chart_data = df
-streamlit.bar_chart(chart_data, "Paie", "Valeur")
+streamlit.bar_chart(chart_data, x="Paie", y="Valeur")
