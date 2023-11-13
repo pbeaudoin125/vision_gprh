@@ -14,9 +14,12 @@ my_cur.execute("select pay_desc, bank_value from fact_bank;")
 results = my_cur.fetchall()
 
 # put the dafta into a dataframe
-df = pandas.DataFrame(results)
+df = pandas.DataFrame(results, columns=["Paie", "Valeur"])
 
 streamlit.header('Sommaire par paie')
 
 # temp write the dataframe to the page so we can see what we're working with
 streamlit.write(df)
+
+chart_data = df
+streamlit.bar_chart(chart_data)
